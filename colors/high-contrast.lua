@@ -177,6 +177,17 @@ hi("@tag.attribute.heex", { fg = colors.fg })
 hi("@string.special.elixir", { fg = colors.green })
 hi("@markup.raw.block.markdown", { fg = colors.grey })
 
+-- YAML
+hi("@property.yaml", { fg = colors.blue1 })
+hi("@string.yaml", { fg = colors.green })
+hi("@number.yaml", { fg = colors.blue, bold = true })
+hi("@boolean.yaml", { fg = colors.purple, italic = true })
+hi("@constant.builtin.yaml", { fg = colors.purple, italic = true }) -- null
+hi("@punctuation.delimiter.yaml", { fg = colors.orange, bold = true }) -- : and -
+hi("@punctuation.special.yaml", { fg = colors.red1, bold = true }) -- & * anchors/aliases
+hi("@tag.yaml", { fg = colors.teal }) -- YAML tags like !!str
+hi("@comment.yaml", { fg = colors.grey, italic = true })
+
 -- Telescope
 hi("TelescopeNormal", { fg = colors.fg, bg = colors.bg_float })
 hi("TelescopeBorder", { fg = colors.fg_dark, bg = colors.bg_float })
