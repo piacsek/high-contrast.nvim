@@ -178,15 +178,27 @@ hi("@string.special.elixir", { fg = colors.green })
 hi("@markup.raw.block.markdown", { fg = colors.grey })
 
 -- YAML
-hi("@property.yaml", { fg = colors.blue1 })
-hi("@string.yaml", { fg = colors.green })
-hi("@number.yaml", { fg = colors.blue, bold = true })
-hi("@boolean.yaml", { fg = colors.purple, italic = true })
-hi("@constant.builtin.yaml", { fg = colors.purple, italic = true }) -- null
-hi("@punctuation.delimiter.yaml", { fg = colors.orange, bold = true }) -- : and -
-hi("@punctuation.special.yaml", { fg = colors.red1, bold = true }) -- & * anchors/aliases
-hi("@tag.yaml", { fg = colors.teal }) -- YAML tags like !!str
-hi("@comment.yaml", { fg = colors.grey, italic = true })
+hi("yamlBlockMappingKey", { fg = colors.blue1 })
+hi("yamlMappingKey", { fg = colors.blue1 })
+hi("yamlFlowMappingKey", { fg = colors.blue1 })
+hi("yamlString", { fg = colors.green })
+hi("yamlFlowString", { fg = colors.green })
+hi("yamlInteger", { fg = colors.blue, bold = true })
+hi("yamlFloat", { fg = colors.blue, bold = true })
+hi("yamlTimestamp", { fg = colors.blue, bold = true })
+hi("yamlBool", { fg = colors.purple, italic = true })
+hi("yamlNull", { fg = colors.purple, italic = true })
+hi("yamlConstant", { fg = colors.purple, italic = true })
+hi("yamlKeyValueDelimiter", { fg = colors.orange, bold = true })
+hi("yamlBlockCollectionItemStart", { fg = colors.orange, bold = true }) -- -
+hi("yamlBlockMappingDelimiter", { fg = colors.orange, bold = true }) -- :
+hi("yamlAnchor", { fg = colors.red1, bold = true })
+hi("yamlAlias", { fg = colors.red1, bold = true })
+hi("yamlNodeTag", { fg = colors.teal })
+hi("yamlDocumentStart", { fg = colors.orange }) -- ---
+hi("yamlDocumentEnd", { fg = colors.orange }) -- ...
+hi("yamlComment", { fg = colors.grey, italic = true })
+hi("yamlEscape", { fg = colors.orange })
 
 -- Telescope
 hi("TelescopeNormal", { fg = colors.fg, bg = colors.bg_float })
