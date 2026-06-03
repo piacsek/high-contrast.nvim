@@ -75,6 +75,31 @@ local colors = {
 	none = "NONE",
 }
 
+-- Terminal palette (ANSI 0-15), drawn from the accent colors above. Used by
+-- :terminal and mirrored into the real terminal by plugins like
+-- ghostty-mirror.nvim.
+local terminal = {
+	[0] = colors.black,
+	[1] = colors.red,
+	[2] = colors.green,
+	[3] = colors.yellow,
+	[4] = colors.blue1,
+	[5] = colors.magenta,
+	[6] = colors.cyan,
+	[7] = colors.grey,
+	[8] = colors.indent,
+	[9] = colors.red1,
+	[10] = colors.green1,
+	[11] = colors.match_brace,
+	[12] = colors.blue,
+	[13] = colors.purple,
+	[14] = colors.teal,
+	[15] = colors.fg,
+}
+for i = 0, 15 do
+	vim.g["terminal_color_" .. i] = terminal[i]
+end
+
 local function hi(group, opts)
 	local cmd = "hi " .. group
 	if opts.fg then
